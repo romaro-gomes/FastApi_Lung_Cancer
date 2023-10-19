@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block title %} Patient Information Form% {%endblock %}
+{% block content %}
+<h1>Hello doctor!</h1>
+
+<h2>I'll help you make clinical decisions! <br>
+    Does your patient have Lung Cancer?</h2>
+<br>
+<h2>Please fill out the form about the patient:</h2>
+
+<br>
+
+<form action="/predict" style="margin-top: 20px" method="post" onsubmit="return validateTemperature()">
+
+    <div class="container text-center">
+        <div class="row">
+
+          <div class="col">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="int" class="form-control" name="age" placeholder="" id="age">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+                <label for="smoking">Smoking</label>
+                <select class="form-control" name="smoking">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+          </div>
+        
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <div class="form-group">
+                  <label for="yellow_fingers">Yellow Finger</label>
+                  <select class="form-control" name="yellow_fingers">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="anxiety">Anxiety</label>
+                  <select class="form-control" name="anxiety">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="peer_pressure">Peer Pressure</label>
+                  <select class="form-control" name="peer_pressure">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <div class="form-group">
+                  <label for="chronic_disease">Chronic Disease</label>
+                  <select class="form-control" name="chronic_disease">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="fatigue">Fatigue</label>
+                  <select class="form-control" name="fatigue">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="allergy">Allergy</label>
+                  <select class="form-control" name="allergy">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <div class="form-group">
+                  <label for="wheezing">Wheezing</label>
+                  <select class="form-control" name="wheezing">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="alcohol_consuming">Alcohol Consuming</label>
+                  <select class="form-control" name="alcohol_consuming">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="coughing">Coughing</label>
+                  <select class="form-control" name="coughing">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <div class="form-group">
+                  <label for="shortness_of_breath">Shortness of Breath</label>
+                  <select class="form-control" name="shortness_of_breath">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="swallowing_difficulty">Swallowing Difficulty</label>
+                  <select class="form-control" name="swallowing_difficulty">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                  <label for="chest_pain">Chest Pain</label>
+                  <select class="form-control" name="chest_pain">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option></select>
+              </div>
+            </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Diagnostic Result{% endblock %}
+{% block content %}
+    
+    <br>
+        <div class="text-center">
+            <h1>Diagnostic Proposed:
+            <br>
+            {% if prediction == "Negative" %}
+                <div class="card bg-success mx-auto" style="width: 10rem;">
+            {% else %}
+                <div class="card bg-danger mx-auto" style="width: 10rem;">
+            {% endif %}
+                {{ prediction }}</h1>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="container">
+            <div class="card text-center container" style="width: 18rem;">
+                <div class="card-header ">
+                        Probability
+                </div>    
+                <ul class="list-group list-group-flush" >
+                            <li class="list-group-item">Positive: {{ probability.split(' ')[0] }}</li>
+                            <li class="list-group-item">Negative: {{ probability.split(' ')[1] }}</li>
+                </ul>
+                
+            </div>
+            
+        
+           
+            
+            
+            <br>
+            <br>
+            <div class="text-center">
+            <a href="/">Voltar para a página inicial</a>
+            </div>
+        </div>
+{% endblock %}
+

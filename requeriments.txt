@@ -1,0 +1,17 @@
+pandas
+matplotlib
+seaborn
+fastapi
+uvicorn
+mlflow
+python-multipart
+imbalanced-learn
+xgboost
+#catboost
+scikit-posthocs
+fastai
+prince
+shap
+virtualenv
+dill
+mca

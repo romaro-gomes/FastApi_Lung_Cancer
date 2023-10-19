@@ -88,6 +88,7 @@ The model has an accuracy superior to random chance. With more data and further 
 ## Using the Model
 ```bash
 docker pull romariogomes/machine_learning_application:latest
+```
 
 
 # Model Metrics
